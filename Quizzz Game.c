@@ -23,7 +23,38 @@ int main(){
     printf("\n\t\t-------------------");
     printf("\n\t\t-------------------");
     printf("\n\t\t  Become a Millionaire");
-    
+    printf("\n\t\t-------------------");
+    printf("\n\t\t-------------------");
+    printf("\n\t\t Press S to start the game");
+    printf("\n\t\t Press V to view the highest score");
+    printf("\n\t\t Press R to reset score");
+    printf("\n\t\t Press H to reset score");
+    printf("\n\t\t Press Q to quit");
+    printf("\n\t\t-------------------");
+    choice= toupper(getch());
+    if(choice=='V'){
+        show_record();
+        goto mainhome;
+    }
+    else if(choice=='H'){
+        help();
+        getch();
+        goto mainhome;
+
+    }
+    else if(choice=='R'){
+        reset_score();
+        getch();
+        goto mainhome;
+
+    }
+    else if(choice=='Q'){
+        exit(1);
+    }
+    else if(choice=='S'){
+        system("cls");
+    }
+
 
 
 
